@@ -11,13 +11,15 @@ namespace Encoding2
         {
             TcpClient client = new TcpClient();
             int port = 5002;
-            IPAddress ip = IPAddress.Parse("172.16.113.179");
+            Console.WriteLine("Skriv serverens ip adresse");
+            string serverIP = Console.ReadLine();
+            IPAddress ip = IPAddress.Parse(serverIP);
             IPEndPoint endpoint = new IPEndPoint(ip, port);
             client.Connect(endpoint);
             NetworkStream stream = client.GetStream();
 
-
-            string text = "hello world!";
+            Console.WriteLine("skriv din besked");
+            string text = Console.ReadLine(); ;
             byte[] buffer = Encoding.UTF8.GetBytes(text);
             stream.Write(buffer, 0, buffer.Length);
 
