@@ -13,6 +13,8 @@ namespace Encoding1
             {
                 Console.WriteLine(b);
             }
+            string converted = Encoding.UTF8.GetString(bytes);
+            Console.WriteLine(converted);
         }
     }
 }
