@@ -8,7 +8,7 @@ namespace Encoding1
         static void Main(string[] args)
         {
             string encoding = "Jeg håber du får en god dag";
-            byte[] bytes = Encoding.ASCII.GetBytes(encoding);
+            byte[] bytes = Encoding.UTF8.GetBytes(encoding);
             foreach (var b in bytes)
             {
                 Console.WriteLine(b);
