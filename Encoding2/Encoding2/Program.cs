@@ -9,6 +9,43 @@ namespace Encoding2
     {
         static void Main(string[] args)
         {
+            bool running = true;
+
+            while(running)
+            {
+                Console.WriteLine("\n\n\nVil du være server eller client?");
+                Console.WriteLine("Skriv 1 for at være server");
+                Console.WriteLine("skriv 2 for at være client");
+                Console.WriteLine("skriv 3 for at exit");
+
+                string input = Console.ReadLine();
+
+                if (input == "1")
+                {
+                    serverfunc();
+                }
+                else if (input == "2")
+                {
+                    clientfunc();
+                }
+                else if (input == "3")
+                {
+                    running = false;
+                }
+                else
+                {
+                    Console.WriteLine("du skal skrive 1 eller 2");
+                }
+            }
+
+
+
+
+
+        }
+
+        static void clientfunc()
+        {
             TcpClient client = new TcpClient();
             int port = 5002;
             Console.WriteLine("Skriv serverens ip adresse");
@@ -24,13 +61,19 @@ namespace Encoding2
             stream.Write(buffer, 0, buffer.Length);
 
             //client.Close();
+        }
 
+        static void serverfunc()
+        {
+            int port1 = 5002;
 
             IPAddress ip1 = IPAddress.Any;
-            IPEndPoint endpoint1 = new IPEndPoint(ip1, port);
+            IPEndPoint endpoint1 = new IPEndPoint(ip1, port1);
 
             TcpListener listener = new TcpListener(endpoint1);
             listener.Start();
+
+            Console.WriteLine("Awaiting Clients....");
 
             TcpClient client1 = listener.AcceptTcpClient();
 
@@ -43,10 +86,10 @@ namespace Encoding2
             string converted = Encoding.UTF8.GetString(buffer1, 0, NumberOfBytes);
 
             Console.WriteLine(converted);
-            
+
 
             //client1.Close();
-
         }
+
     }
 }
