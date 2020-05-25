@@ -21,7 +21,29 @@ namespace Encoding2
             byte[] buffer = Encoding.UTF8.GetBytes(text);
             stream.Write(buffer, 0, buffer.Length);
 
-            client.Close();
+            //client.Close();
+
+
+            IPAddress ip1 = IPAddress.Any;
+            IPEndPoint endpoint1 = new IPEndPoint(ip1, port);
+
+            TcpListener listener = new TcpListener(endpoint1);
+            listener.Start();
+
+            TcpClient client1 = listener.AcceptTcpClient();
+
+            NetworkStream stream1 = client1.GetStream();
+
+            byte[] buffer1 = new byte[255];
+
+            int NumberOfBytes = stream1.Read(buffer1, 0, 255);
+
+            string converted = Encoding.UTF8.GetString(buffer1, 0, NumberOfBytes);
+
+            Console.WriteLine(converted);
+            
+
+            //client1.Close();
 
         }
     }
