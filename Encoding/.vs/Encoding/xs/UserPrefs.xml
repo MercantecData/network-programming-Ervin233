@@ -1,12 +1,12 @@
 ﻿<Properties StartupConfiguration="{AC8A0797-96D7-4FBD-B3AE-4B80C7B3B8A6}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="Encoding/Program.cs">
     <Files>
-      <File FileName="Encoding/Program.cs" Line="9" Column="38" />
+      <File FileName="Encoding/Program.cs" Line="18" Column="10" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Encoding FirstBuild="True" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.ItemProperties.Encoding PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
