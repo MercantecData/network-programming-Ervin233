@@ -1,7 +1,7 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Encoding", "Encoding\Encoding.csproj", "{279FEAF7-7D05-4C99-853F-5DA6864265CA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Encoding", "Encoding\Encoding.csproj", "{AC8A0797-96D7-4FBD-B3AE-4B80C7B3B8A6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,9 +9,9 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{279FEAF7-7D05-4C99-853F-5DA6864265CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{279FEAF7-7D05-4C99-853F-5DA6864265CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{279FEAF7-7D05-4C99-853F-5DA6864265CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{279FEAF7-7D05-4C99-853F-5DA6864265CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC8A0797-96D7-4FBD-B3AE-4B80C7B3B8A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC8A0797-96D7-4FBD-B3AE-4B80C7B3B8A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC8A0797-96D7-4FBD-B3AE-4B80C7B3B8A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC8A0797-96D7-4FBD-B3AE-4B80C7B3B8A6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

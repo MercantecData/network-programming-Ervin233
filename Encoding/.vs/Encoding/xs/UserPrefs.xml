@@ -1,7 +1,7 @@
-﻿<Properties StartupConfiguration="{279FEAF7-7D05-4C99-853F-5DA6864265CA}|Default">
+﻿<Properties StartupConfiguration="{AC8A0797-96D7-4FBD-B3AE-4B80C7B3B8A6}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="Encoding/Program.cs">
     <Files>
-      <File FileName="Encoding/Program.cs" Line="1" Column="1" />
+      <File FileName="Encoding/Program.cs" Line="9" Column="38" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

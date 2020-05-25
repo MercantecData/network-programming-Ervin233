@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/ErvinAvdic/Desktop/Netværkprogrammering/Encoding/Encoding/Encoding.csproj": {}
+    "/Users/ErvinAvdic/Documents/Netværkprogrammering/network-programming-Ervin233/Encoding/Encoding/Encoding.csproj": {}
   },
   "projects": {
-    "/Users/ErvinAvdic/Desktop/Netværkprogrammering/Encoding/Encoding/Encoding.csproj": {
+    "/Users/ErvinAvdic/Documents/Netværkprogrammering/network-programming-Ervin233/Encoding/Encoding/Encoding.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/ErvinAvdic/Desktop/Netværkprogrammering/Encoding/Encoding/Encoding.csproj",
+        "projectUniqueName": "/Users/ErvinAvdic/Documents/Netværkprogrammering/network-programming-Ervin233/Encoding/Encoding/Encoding.csproj",
         "projectName": "Encoding",
-        "projectPath": "/Users/ErvinAvdic/Desktop/Netværkprogrammering/Encoding/Encoding/Encoding.csproj",
+        "projectPath": "/Users/ErvinAvdic/Documents/Netværkprogrammering/network-programming-Ervin233/Encoding/Encoding/Encoding.csproj",
         "packagesPath": "/Users/ErvinAvdic/.nuget/packages/",
-        "outputPath": "/Users/ErvinAvdic/Desktop/Netværkprogrammering/Encoding/Encoding/obj/",
+        "outputPath": "/Users/ErvinAvdic/Documents/Netværkprogrammering/network-programming-Ervin233/Encoding/Encoding/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/ErvinAvdic/.config/NuGet/NuGet.Config"
