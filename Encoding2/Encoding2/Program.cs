@@ -12,14 +12,13 @@ namespace Encoding2
             int port = 5002;
             bool running = true;
 
+            menu();
             while(running)
             {
-                Console.WriteLine("\n\n\nVil du være server eller client?");
-                Console.WriteLine("Skriv 1 for at være server");
-                Console.WriteLine("skriv 2 for at være client");
-                Console.WriteLine("skriv 3 for at exit");
-
                 string input = Console.ReadLine();
+
+                Console.Clear();
+                menu();
 
                 if (input == "1")
                 {
@@ -118,7 +117,15 @@ namespace Encoding2
             byte[] buffer = Encoding.UTF8.GetBytes("Det virkede!!");
             stream.Write(buffer, 0, buffer.Length);
 
-        }
 
+          
+        }
+        static void menu()
+        {
+            Console.WriteLine("\n\n\nVil du være server eller client?");
+            Console.WriteLine("Skriv 1 for at være server");
+            Console.WriteLine("skriv 2 for at være client");
+            Console.WriteLine("skriv 3 for at exit");
+        }
     }
 }
