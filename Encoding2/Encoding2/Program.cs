@@ -9,6 +9,7 @@ namespace Encoding2
     {
         static void Main(string[] args)
         {
+            int port = 5002;
             bool running = true;
 
             while(running)
@@ -22,11 +23,11 @@ namespace Encoding2
 
                 if (input == "1")
                 {
-                    serverfunc();
+                    serverfunc(port);
                 }
                 else if (input == "2")
                 {
-                    clientfunc();
+                    clientfunc(port);
                 }
                 else if (input == "3")
                 {
@@ -44,10 +45,9 @@ namespace Encoding2
 
         }
 
-        static void clientfunc()
+        static void clientfunc(int port)
         {
             TcpClient client = new TcpClient();
-            int port = 5002;
             Console.WriteLine("Skriv serverens ip adresse");
             string serverIP = Console.ReadLine();
             IPAddress ip = IPAddress.Parse(serverIP);
@@ -83,12 +83,11 @@ namespace Encoding2
 
         }
 
-        static void serverfunc()
+        static void serverfunc(int port)
         {
-            int port1 = 5002;
 
             IPAddress ip1 = IPAddress.Any;
-            IPEndPoint endpoint1 = new IPEndPoint(ip1, port1);
+            IPEndPoint endpoint1 = new IPEndPoint(ip1, port);
 
             TcpListener listener = new TcpListener(endpoint1);
             listener.Start();
@@ -110,7 +109,6 @@ namespace Encoding2
             listener.Stop();
 
             TcpClient client = new TcpClient();
-            int port = 5002;
             Console.WriteLine("Skriv serverens ip adresse");
             IPAddress ip = IPAddress.Parse("172.16.113.179");
             IPEndPoint endpoint = new IPEndPoint(ip, port);
