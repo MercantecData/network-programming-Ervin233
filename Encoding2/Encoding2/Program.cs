@@ -60,7 +60,27 @@ namespace Encoding2
             byte[] buffer = Encoding.UTF8.GetBytes(text);
             stream.Write(buffer, 0, buffer.Length);
 
-            //client.Close();
+
+            IPAddress ip1 = IPAddress.Any;
+            IPEndPoint endpoint1 = new IPEndPoint(ip1, port);
+
+            TcpListener listener = new TcpListener(endpoint1);
+            listener.Start();
+
+            TcpClient client1 = listener.AcceptTcpClient();
+
+            NetworkStream stream1 = client1.GetStream();
+
+            byte[] buffer1 = new byte[255];
+
+            int NumberOfBytes = stream1.Read(buffer1, 0, 255);
+
+            string converted = Encoding.UTF8.GetString(buffer1, 0, NumberOfBytes);
+
+            Console.WriteLine(converted);
+
+            listener.Stop();
+
         }
 
         static void serverfunc()
@@ -87,8 +107,19 @@ namespace Encoding2
 
             Console.WriteLine(converted);
 
+            listener.Stop();
 
-            //client1.Close();
+            TcpClient client = new TcpClient();
+            int port = 5002;
+            Console.WriteLine("Skriv serverens ip adresse");
+            IPAddress ip = IPAddress.Parse("172.16.113.179");
+            IPEndPoint endpoint = new IPEndPoint(ip, port);
+            client.Connect(endpoint);
+            NetworkStream stream = client.GetStream();
+
+            byte[] buffer = Encoding.UTF8.GetBytes("Det virkede!!");
+            stream.Write(buffer, 0, buffer.Length);
+
         }
 
     }
