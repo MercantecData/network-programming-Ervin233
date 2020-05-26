@@ -30,7 +30,7 @@ namespace CallResponse
                     string serverIP = Console.ReadLine();
                     while (true)
                     {
-                        clientFunc(port,serverIP);
+                        clientFunc(port);
                     }
                     
                 }
@@ -63,18 +63,27 @@ namespace CallResponse
             }
             
         }
-        static void clientFunc(int port, string serverIP)
+        static void clientFunc(int port)
         {
             // Connects to server
-            TcpClient client = connect(serverIP, port);
-            Console.WriteLine("Skriv din besked");
-            string text = Console.ReadLine();
-            // Send message to server
-            sendMessage(text, client);
-            // Start listener
-            TcpListener listener = StartListener(port);
-            // Get message from server
-            getMessageFromStream(listener);
+
+            Console.WriteLine("Skriv serverens ip adresse");
+            string serverIP = Console.ReadLine();
+
+            while (true)
+            {
+                TcpClient client = connect(serverIP, port);
+                Console.WriteLine("Skriv din besked");
+                string text = Console.ReadLine();
+                // Send message to server
+                sendMessage(text, client);
+                // Start listener
+                TcpListener listener = StartListener(port);
+                // Get message from server
+                getMessageFromStream(listener);
+            }
+
+            
         }
         static void menu()
         {
