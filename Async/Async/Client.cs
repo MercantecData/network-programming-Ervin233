@@ -10,7 +10,7 @@ namespace Async
         {
 
             TcpClient client = new TcpClient();
-            IPAddress ip = IPAddress.Parse("172.16.112.238");
+            IPAddress ip = IPAddress.Parse("172.16.113.179");
             IPEndPoint endpoint = new IPEndPoint(ip, port);
 
             client.Connect(endpoint);
@@ -33,6 +33,11 @@ namespace Async
                 client.Close();
             
                 
+        }
+
+        internal static object Getstream()
+        {
+            throw new NotImplementedException();
         }
 
         public async void receivedMessage(NetworkStream stream) {
