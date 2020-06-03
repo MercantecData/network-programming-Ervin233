@@ -10,7 +10,7 @@ namespace Async
         {
 
             TcpClient client = new TcpClient();
-            IPAddress ip = IPAddress.Parse("172.16.113.179");
+            IPAddress ip = IPAddress.Parse("172.16.113.146");
             IPEndPoint endpoint = new IPEndPoint(ip, port);
 
             client.Connect(endpoint);
