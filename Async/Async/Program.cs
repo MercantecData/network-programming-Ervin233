@@ -7,13 +7,22 @@ namespace Async
         public static void Main(string[] args)
         {
             Console.WriteLine("Hvilken Port?");
+
+            //Converting to a int from a string 
             int port = Convert.ToInt32(Console.ReadLine());
             bool running = true;
+
+            //The menu 
             menu();
             while (running)
             {
+                //Gets the input from the console 
                 string input = Console.ReadLine();
+                
+                // Clear the console
                 Console.Clear();
+
+                //Show the menu 
                 menu();
                 if (input == "1")
                 {
